@@ -13,10 +13,10 @@ public class TroopAI : MonoBehaviour
 	private float _moveSpeed;
 
 	[SerializeField]
-	private GameObject _testPrefab;
+	private TroopState _troopState;
 
 	[SerializeField]
-	private TroopState _troopState;
+	private Transform _currentFood;
 
 	private TroopMovement _troopMovement;
 	private SummonFinder _summonFinder;
@@ -75,7 +75,7 @@ public class TroopAI : MonoBehaviour
 
 	private void GoToFood()
 	{
-		if (_summonFinder.GetCurrentSummon().GetTransform() == null)
+		if (_summonFinder.GetCurrentSummon() != null)
 		{
 			_direction = ( _summonFinder.GetCurrentSummon().GetTransform().position - transform.position ).normalized;
 			_troopMovement.MoveTroopForBoth( _direction, _troopRB, _moveSpeed, false );

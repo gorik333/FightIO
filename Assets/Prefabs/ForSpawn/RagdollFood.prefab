@@ -1244,6 +1244,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1836,6 +1837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7077386954383557573}
   - component: {fileID: 3666234171134741145}
+  - component: {fileID: 7370758790000869403}
   m_Layer: 0
   m_Name: RagdollFood
   m_TagString: Untagged
@@ -1872,6 +1874,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _foodDataObject: {fileID: 11400000, guid: 577bd32542adc53489707691684dbd82, type: 2}
+--- !u!114 &7370758790000869403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7601017630689089919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e6efbe081264a4aaed65bb14f20f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7639884005461379165
 GameObject:
   m_ObjectHideFlags: 0

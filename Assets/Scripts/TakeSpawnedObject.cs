@@ -57,7 +57,7 @@ public class TakeSpawnedObject : MonoBehaviour
     }
 
 
-    private void RemoveEatenSummon(IFoundable summon)
+    private void RemoveEatenSummon(Foundable summon)
     {
         if (_summonFinder != null)
             _summonFinder.RemoveEatenSummon(summon);

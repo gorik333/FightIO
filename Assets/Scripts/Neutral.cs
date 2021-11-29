@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Neutral : MonoBehaviour, IFoundable
+public class Neutral : Foundable
 {
 	[SerializeField]
 	private TroopMovement _troopMovement;
@@ -68,11 +68,5 @@ public class Neutral : MonoBehaviour, IFoundable
 
 			TroopSpawner.Instance.AddTakenToArmyTroop( GetComponent<AttackAffector>() );
 		}
-	}
-
-
-	public Transform GetTransform()
-	{
-		return transform;
 	}
 }

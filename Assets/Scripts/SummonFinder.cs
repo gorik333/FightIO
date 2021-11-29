@@ -4,9 +4,9 @@ using UnityEngine;
 public class SummonFinder : MonoBehaviour
 {
 	[SerializeField]
-	private IFoundable _currentSummon;
+	private Foundable _currentSummon;
 
-	private List<IFoundable> _summonInArea;
+	private List<Foundable> _summonInArea;
 
 	private TroopAI _troopAI;
 	private SphereCollider _sphereCollider;
@@ -18,7 +18,7 @@ public class SummonFinder : MonoBehaviour
 
 	private void Start()
 	{
-		_summonInArea = new List<IFoundable>();
+		_summonInArea = new List<Foundable>();
 
 		_troopAI = GetComponentInParent<TroopAI>();
 
@@ -45,9 +45,9 @@ public class SummonFinder : MonoBehaviour
 
 	private void OnTriggerEnter( Collider other )
 	{
-		if (other.GetComponentInParent<IFoundable>() != null)
+		if (other.GetComponentInParent<Foundable>() != null)
 		{
-			IFoundable summon = other.GetComponentInParent<IFoundable>();
+			Foundable summon = other.GetComponentInParent<Foundable>();
 			if (!_summonInArea.Contains( summon ))
 			{
 				_summonInArea.Add( summon );
@@ -59,9 +59,9 @@ public class SummonFinder : MonoBehaviour
 
 	private void OnTriggerExit( Collider other )
 	{
-		if (other.GetComponentInParent<IFoundable>() != null)
+		if (other.GetComponentInParent<Foundable>() != null)
 		{
-			IFoundable summon = other.GetComponentInParent<IFoundable>();
+			Foundable summon = other.GetComponentInParent<Foundable>();
 			if (_summonInArea.Contains( summon ))
 			{
 				_summonInArea.Remove( summon );
@@ -74,22 +74,22 @@ public class SummonFinder : MonoBehaviour
 	private void ChooseNearestFood()
 	{
 		float minDistance = float.MaxValue;
-		IFoundable nearestFood = null;
+		Foundable nearestFood = null;
 
 		for (int i = 0; i < _summonInArea.Count; i++)
 		{
-			if (_summonInArea[i] == null)
+			if (_summonInArea[ i ] == null)
 			{
-				RemoveEatenSummon( _summonInArea[i] );
+				RemoveEatenSummon( _summonInArea[ i ] );
 
 				continue;
 			}
 
-			float currentDist = Vector3.Distance( transform.position, _summonInArea[i].GetTransform().position);
+			float currentDist = Vector3.Distance( transform.position, _summonInArea[ i ].GetTransform().position );
 
 			if (currentDist < minDistance)
 			{
-				nearestFood = _summonInArea[i];
+				nearestFood = _summonInArea[ i ];
 				minDistance = currentDist;
 			}
 		}
@@ -104,7 +104,7 @@ public class SummonFinder : MonoBehaviour
 	}
 
 
-	public void RemoveEatenSummon( IFoundable summon )
+	public void RemoveEatenSummon( Foundable summon )
 	{
 		if (_summonInArea.Contains( summon ))
 		{
@@ -115,11 +115,17 @@ public class SummonFinder : MonoBehaviour
 	}
 
 
-	public IFoundable GetCurrentSummon()
+	public Foundable GetCurrentSummon()
 	{
-		if (_currentSummon != null)
+		//if (_currentSummon != null)
+		//{
+
 			return _currentSummon;
-		else
-			return null;
+		//}
+		//else
+		//{
+
+		//	return null;
+		//}
 	}
 }

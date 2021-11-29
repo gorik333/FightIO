@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Food : MonoBehaviour, IFoundable
+public class Food : Foundable
 {
 	[Header( "Common food" )]
 	[SerializeField]
@@ -47,19 +47,13 @@ public class Food : MonoBehaviour, IFoundable
 		_growFactor = currentFood.GrowFactor;
 		_foodWeight = currentFood.FoodWeight;
 
-		Instantiate( currentFood.gameObject, transform ); // ??  --  Уже понял
+		Instantiate( currentFood.gameObject, transform );
 	}
 
 
 	public void DestroyFood()
 	{
 		Destroy( gameObject );
-	}
-
-
-	public Transform GetTransform()
-	{
-		return transform;
 	}
 
 

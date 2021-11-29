@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 738052202628352604}
   - component: {fileID: 738052202628352595}
+  - component: {fileID: -4137531156123772760}
   m_Layer: 0
   m_Name: Food
   m_TagString: Untagged
@@ -47,5 +48,15 @@ MonoBehaviour:
   - {fileID: 5337074776108014592, guid: e0c9c38cdb28db74cba0dc2e3c4cdbeb, type: 3}
   _ragdollFoodData:
   - {fileID: 3666234171134741145, guid: d89035b8b4663e64b995b690584925a8, type: 3}
-  _ragdollArmy:
-  - {fileID: 0}
+--- !u!114 &-4137531156123772760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738052202628352600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e6efbe081264a4aaed65bb14f20f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
