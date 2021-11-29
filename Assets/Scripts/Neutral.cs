@@ -67,6 +67,7 @@ public class Neutral : Foundable
 			}
 
 			TroopSpawner.Instance.AddTakenToArmyTroop( GetComponent<AttackAffector>() );
+			Spawner.Instance.RemoveSummon( gameObject );
 		}
 	}
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MakeArmy_1
   m_EditorClassIdentifier: 
   LevelType: 1
-  CollectingFoodStageDuration: 25
+  CollectingFoodStageDuration: 20
   SpawnCooldown: 0.925
   EnemiesCount: 1
   AlliesCount: 0

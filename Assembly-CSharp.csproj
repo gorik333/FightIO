@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,6 +53,9 @@
     <UnityVersion>2021.1.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Imported\ScriptsImported\cross\Effect.cs" />
     <Compile Include="Assets\Imported\ScriptsImported\cross\TimerCall.cs" />
     <Compile Include="Assets\Scripts\RagdollArmy.cs" />
@@ -92,6 +95,7 @@
     <Compile Include="Assets\Imported\ScriptsImported\core\Game.cs" />
     <Compile Include="Assets\Imported\ScriptsImported\core\UIProc.cs" />
     <Compile Include="Assets\Scripts\TriangleGenerator.cs" />
+    <Compile Include="Assets\Scripts\Foundable.cs" />
     <Compile Include="Assets\Scripts\DataScripts\LevelData.cs" />
     <Compile Include="Assets\Imported\MaxSdk\Scripts\MaxSdkUnityEditor.cs" />
     <Compile Include="Assets\Scripts\AnimatorController.cs" />
@@ -129,7 +133,6 @@
     <Compile Include="Assets\Scripts\TroopAI.cs" />
     <Compile Include="Assets\Scripts\LevelStageUI.cs" />
     <Compile Include="Assets\Imported\ScriptsImported\core\WndMainMenu.cs" />
-    <Compile Include="Assets\Scripts\Foundable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

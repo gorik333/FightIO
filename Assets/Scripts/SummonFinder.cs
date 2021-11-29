@@ -117,15 +117,6 @@ public class SummonFinder : MonoBehaviour
 
 	public Foundable GetCurrentSummon()
 	{
-		//if (_currentSummon != null)
-		//{
-
 			return _currentSummon;
-		//}
-		//else
-		//{
-
-		//	return null;
-		//}
 	}
 }

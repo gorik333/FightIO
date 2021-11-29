@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _troopType: 0
-  _currentWeightNumber: 5
+  _currentWeightNumber: 8
   _growModel: {fileID: 6957930755067013535}
 --- !u!114 &7868575729174159324
 MonoBehaviour:

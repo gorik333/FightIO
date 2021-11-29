@@ -96,7 +96,7 @@ public class Spawner : MonoBehaviour
     {
         GameObject neutral = Instantiate(_neutralPrefab, RandomPoint.Instance.GetRandomPoint(), Quaternion.identity, transform);
 
-        //_spawnedItemsList.Add(neutral);
+        _spawnedItemsList.Add(neutral);
     }
 
 
@@ -106,6 +106,12 @@ public class Spawner : MonoBehaviour
 
         _spawnedItemsList.Add(food);
     }
+
+
+    public void RemoveSummon(GameObject item )
+	{
+        _spawnedItemsList.RemoveAt( _spawnedItemsList.IndexOf(item));
+	}
 
 
     public void ClearMapFromFood()

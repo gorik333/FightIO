@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TroopParticlesController : MonoBehaviour
@@ -12,14 +11,10 @@ public class TroopParticlesController : MonoBehaviour
 
     private SkinnedMeshRenderer _skinnedMeshRenderer;
 
-    private Material _troopMaterial;
-
 
     private void Start()
     {
         _skinnedMeshRenderer = transform.parent.GetComponentInChildren<SkinnedMeshRenderer>();
-
-        _troopMaterial = _skinnedMeshRenderer.material;
     }
 
 
@@ -35,7 +30,7 @@ public class TroopParticlesController : MonoBehaviour
 
         ParticleSystem particleSystem = Instantiate(_deathParticles, _deathSpawnPosition.position, Quaternion.identity).GetComponent<ParticleSystem>();
 
-        particleSystem.GetComponent<Renderer>().material = _troopMaterial;
+        particleSystem.GetComponent<Renderer>().material = _skinnedMeshRenderer.material;
 
         particleSystem.Play();
 
