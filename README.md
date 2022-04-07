@@ -18,3 +18,6 @@ and start to fight. Everyone has the same amount of health.
   4. The character is a Ragdoll.
   5. Physics (addforce, rigidbody, physic materials, colliders, triggers)
   6. There is a system of movement of enemies to a random point on the map, and movement to food.
+
+Gameplay video:
+https://youtu.be/7aA9XYBkmws
